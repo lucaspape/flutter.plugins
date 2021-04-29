@@ -219,10 +219,10 @@ class AudioSystem {
       MediaActionType.skipBackward: mediaSkipBackward,
     };
 
-    final List<String> actionStrings = actions
+    final List<String?> actionStrings = actions
         .map((MediaActionType type) => mediaActionTypeToString[type])
         .where((string) => string != null)
-        .toList() as List<String>;
+        .toList();
 
     final Map<String, dynamic> map = <String, dynamic>{
       mediaActionsKey: actionStrings
